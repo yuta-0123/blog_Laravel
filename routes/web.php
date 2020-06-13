@@ -33,8 +33,10 @@ Route::get('/join/',function(){
     return redirect()->to('/');
 });
 
+Route::get('/sum/{x}/{y}/','MathController@sum');
+
+Route::get('/entries/','EntriesController@index');
+
 Route::get('/{id}/', function($id){
     return $id.'のページ';
 });
-
-Route::get('/sum/{x}/{y}/','MathController@sum');
